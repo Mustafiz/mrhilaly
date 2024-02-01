@@ -2,13 +2,13 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     event.preventDefault(); // Prevent form submission
 
     // Validate form inputs
-    var name = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var subject = document.getElementById('subject').value.trim();
-    var message = document.getElementById('message').value.trim();
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let subject = document.getElementById('subject').value.trim();
+    let message = document.getElementById('message').value.trim();
 
     // Email validation using a regular expression
-    var emailRegex = /^\S+@\S+\.\S+$/;
+    let emailRegex = /^\S+@\S+\.\S+$/;
     if (!name || !email || !subject || !message || !emailRegex.test(email)) {
         alert('Please fill in all fields with valid inputs.');
         return;
@@ -40,6 +40,7 @@ function submitForm(formData) {
                 // Redirect to the thank you page
                 window.location.href = 'thanks.html';
             } else {
+                console.log(response);
                 throw new Error('Form submission failed.');
             }
         })
