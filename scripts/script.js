@@ -29,9 +29,11 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 function submitForm(formData) {
     // Make an API request to the backend (API Gateway) for form submission
     fetch('https://api.mustafizrh.net/dev', { // URL that represents the backend API endpoint to which the form data is going to be sent
+        mode: 'no-cors',
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
         },
         body: JSON.stringify(formData)
     })
