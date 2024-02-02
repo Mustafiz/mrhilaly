@@ -30,11 +30,8 @@ function submitForm(formData) {
     // Make an API request to the backend (API Gateway) for form submission
     fetch('https://y0upmnywf9.execute-api.us-east-1.amazonaws.com/dev/submit', { // URL that represents the backend API endpoint to which the form data is going to be sent
         method: 'POST',
-        statusCode: 200,
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Methods':'POST,OPTIONS',
-            'Access-Control-Allow-Headers':'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
         },
         body: JSON.stringify(formData)
     })
