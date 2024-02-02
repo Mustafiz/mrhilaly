@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume of Mustafizur Rahman Hilaly</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
+    <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
+    <link href="css/main.css?ver=1.1.0" rel="stylesheet">
+    <noscript>
+        <style type="text/css">
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+        </style>
+    </noscript>
+</head>
+<body id="top">
+<header>
+    <div class="profile-page sidebar-collapse">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+            <div class="container">
+                <div class="navbar-translate"><a class="navbar-brand" href="index.html" rel="tooltip">Resume</a>
+                    <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                            aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span
+                            class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="page-content">
+    <div>
+        <div class="profile-page">
+            <div class="wrapper">
+                <div class="page-header page-header-small" filter-color="green">
+                    <div class="page-header-image" data-parallax="true"
+                         style="background-image: url('images/cc-bg-1.jpg')"></div>
+                    <div class="container">
+                        <div class="content-center">
+                            <div class="cc-profile-image"><a href="#"><img src="images/mustafiz.jpg" alt="Image"/></a>
+                            </div>
+                            <div class="h2 title">Mustafizur Rahman Hilaly</div>
+                            <p class="category text-white">Back-End Engineer | Java + Spring Boot + AWS | Writing Clean,
+                                Concise, Scalable Code</p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="container">
+                            <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon"
+                                                             href="https://www.facebook.com/mustafiz.hilaly"
+                                                             rel="tooltip" title="Follow me on Facebook"
+                                                             target="_blank"><i
+                                    class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon"
+                                                                      href="#" rel="tooltip"
+                                                                      title="Follow me on Twitter"><i
+                                    class="fa fa-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="about">
+            <div class="container">
+                <div class="card" data-aos="fade-up" data-aos-offset="10">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="h4 mt-0 title">Harnessing AWS Lambda and SES for Efficient Mass Emailing
+                                </div>
+                                <p>In today's digital age, email remains a cornerstone of business communication.
+                                    Whether it's for marketing campaigns, transactional emails, or notifications, the
+                                    ability to send mass emails efficiently and reliably is crucial for maintaining
+                                    engagement and driving growth. Amazon Web Services (AWS) offers powerful tools for
+                                    this purpose, notably AWS Lambda and Amazon Simple Email Service (SES). This blog
+                                    post explores how to leverage these services for effective mass emailing, providing
+                                    a scalable, cost-effective solution that can adapt to the needs of any business.</p>
+                                <div class="h5 mt-0 title">Understanding AWS Lambda and SES</div>
+                                <p><span class="font-weight-bold">AWS Lambda</span> is a serverless compute service that
+                                    lets you run code without provisioning or managing servers, scaling automatically
+                                    with the size of your workload. Lambda is ideal for event-driven applications or for
+                                    automating tasks in response to triggers.</p>
+                                <p><span class="font-weight-bold">Amazon SES</span> is a cloud-based email sending
+                                    service designed to help digital marketers and application developers send
+                                    marketing, notification, and transactional emails. It's a reliable, scalable way to
+                                    send email, offering high deliverability and robust analytics to monitor your email
+                                    performance.</p>
+                                <p>Combining Lambda with SES provides a powerful architecture for mass emailing,
+                                    enabling businesses to send large volumes of emails quickly, without the overhead of
+                                    managing infrastructure.</p>
+                                <div class="h4 mt-0 title">Setting Up Your Mass Emailing System</div>
+                                <div class="h5 mt-0 title">Step 1: Verify Your Email Domain with SES</div>
+                                <p>Before sending emails through SES, you must verify your email address or domain to
+                                    prove that you own it. This step is crucial for preventing spam and ensuring email
+                                    deliverability. In the SES console, under "Identity Management," choose "Domains" or
+                                    "Email Addresses" to initiate the verification process.</p>
+                                <div class="h5 mt-0 title">Step 2: Create an IAM Role for Lambda</div>
+                                <p>Create an IAM (Identity and Access Management) role that grants your Lambda function
+                                    permissions to use SES to send emails. This role should include policies that allow
+                                    actions like <span class="font-weight-bold">ses:SendEmail</span> and <span
+                                            class="font-weight-bold">ses:SendRawEmail.</span></p>
+                                <div class="h5 mt-0 title">Step 3: Set Up a Lambda Function</div>
+                                <p>In the AWS Lambda console, create a new function. Choose a runtime for your code
+                                    (Node.js or Python are popular choices for email tasks). Implement your email
+                                    sending logic within this function. For example, your function might accept a list
+                                    of recipients, a subject, and a body, then use SES to send the email.</p>
+                                <div class="h5 mt-0 title">Example Code Snippet for Node.js:</div>
+                                <code>
+                                    const AWS = require('aws-sdk');<br>
+                                    const ses = new AWS.SES();<br><br>
+
+                                    exports.handler = async (event) => {<br>
+                                    const params = {<br>
+                                    Destination: {<br>
+                                    ToAddresses: event.Recipients,<br>
+                                    },<br>
+                                    Message: {<br>
+                                    Body: {<br>
+                                    Text: { Data: event.Body },<br>
+                                    },<br>
+                                    Subject: { Data: event.Subject },<br>
+                                    },<br>
+                                    Source: 'yourverifiedemail@example.com',<br>
+                                    };<br><br>
+
+                                    try {<br>
+                                    await ses.sendEmail(params).promise();<br>
+                                    return { status: 'Success' };<br>
+                                    } catch (error) {<br>
+                                    return { status: 'Error', message: error.message };<br>
+                                    }<br>
+                                    };
+                                </code>
+                                <div class="h5 mt-0 title">Step 4: Integrate Lambda with Your Application</div>
+                                <p>Trigger your Lambda function from your application to send emails. This can be done directly via the AWS SDK or by using AWS API Gateway to create a REST API that invokes your Lambda function.</p>
+                                <div class="h5 mt-0 title">Step 5: Monitor and Optimize</div>
+                                <p>Utilize SES and Lambda metrics to monitor the performance of your email system. SES provides feedback on bounces, complaints, and delivery rates, while Lambda metrics can help you track executions, duration, and errors. Use this data to refine your email strategy, ensuring high deliver ability and engagement.</p>
+                                <div class="h4 mt-0 title">Best Practices for Mass Emailing</div>
+                                <ul>
+                                    <li><span class="font-weight-bold">Comply with Email Regulations:</span> Adhere to laws like GDPR and CAN-SPAM, ensuring you have consent to email your recipients and include an unsubscribe link in your communications.</li>
+                                    <li><span class="font-weight-bold">Maintain a Healthy Sender Reputation:</span> Regularly clean your email list to remove invalid addresses and minimize bounces.</li>
+                                    <li><span class="font-weight-bold">Personalize Your Emails:</span> Use recipient data to personalize emails, improving engagement and response rates.</li>
+                                    <li><span class="font-weight-bold">Test and Segment Your Emails:</span> Experiment with different subject lines and content, and segment your audience to tailor your messaging for better results.</li>
+                                </ul>
+                                <div class="h4 mt-0 title">Conclusion</div>
+                                <p>AWS Lambda and SES offer a potent combination for mass emailing, balancing simplicity with flexibility. By following the steps outlined above, you can set up a mass emailing solution that scales with your business, ensures reliable delivery, and engages your audience effectively. Remember, the key to successful email communication is not just the technology you use, but how you use it to create meaningful connections with your audience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container text-center"><a class="cc-facebook btn btn-link"
+                                          href="https://www.facebook.com/mustafiz.hilaly" target="_blank"><i
+            class="fa fa-facebook fa-2x "
+            aria-hidden="true"></i></a><a
+            class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+    </div>
+    <div class="h4 title text-center">Mustafizur Rahman Hilaly</div>
+    <div class="text-center text-muted">
+        <p>&copy; Mustafizur Rahman Hilaly. All rights reserved.<br>Design - <a class="credit" href="index.html">Mustafiz</a>
+        </p>
+    </div>
+</footer>
+<script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
+<script src="js/core/popper.min.js?ver=1.1.0"></script>
+<script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
+<script src="js/now-ui-kit.js?ver=1.1.0"></script>
+<script src="js/aos.js?ver=1.1.0"></script>
+<script src="scripts/main.js?ver=1.1.0"></script>
+</body>
+</html>

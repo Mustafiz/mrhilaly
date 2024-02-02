@@ -1,6 +1,8 @@
 const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 const { v4: uuidv4 } = require('uuid');
+const cors = require('cors');
+app.use(cors());
 
 exports.handler = async (event) => {
     try {
